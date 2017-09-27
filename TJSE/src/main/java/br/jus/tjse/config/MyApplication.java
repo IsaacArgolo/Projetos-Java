@@ -27,62 +27,12 @@ public class MyApplication extends Application {
 		conf.setSchemes(new String[] { "http" });
 		conf.setResourcePackage(ProcessoResources.class.getPackage().getName());
 		conf.setScan(true);
-		// register(ProcessoResources.class);
-		// register(JacksonFeature.class);
-		// register(AllExceptionMapper.class);
+		
 		System.out.println(ProcessoResources.class.getPackage().getName());
-		// register(ApiListingResource.class);
-		// register(ApiDeclarationProvider.class);
-		// register(ApiListingResourceJSON.class);
-		// register(ResourceListingProvider.class);
-
-		// property(MessageProperties.XML_FORMAT_OUTPUT, true);
-		// property(ServerProperties.TRACING, "ALL");
-		//
-
-		// Resources.
-		// System.out.println(ProcessoResources.class.getPackage().getName());
-		// packages(ProcessoResources.class.getPackage().getName());
-		// Validation.
-		// register(ValidationConfigurationContextResolver.class);
-
-		// Providers - JSON.
-		// register(MoxyJsonFeature.class);
-		// register(new MoxyJsonConfig().setFormattedOutput(true)
-		// // Turn off BV otherwise the entities on server would be validated by
-		// MOXy as well.
-		// .property(MarshallerProperties.BEAN_VALIDATION_MODE,
-		// BeanValidationMode.NONE)
-		// .resolver());
-		// register(ValidationException.class);
+		
 	}
 
-	// @PostConstruct
-	// public void initializeSwaggerConfiguration() {
-	//
-	// final ReflectiveJaxrsScanner scanner = new ReflectiveJaxrsScanner();
-	// scanner.setResourcePackage("br.jus.tjse.server");
-	// ScannerFactory.setScanner(scanner);
-	// ClassReaders.setReader(new DefaultJaxrsApiReader());
-	// final SwaggerConfig config = ConfigFactory.config();
-	// config.setApiVersion("1.0");
-	// config.setBasePath("http://localhost:8080/TJSE/rest");
-	// }
-
-	/*
-	 * @Override public Set<Class<?>> getClasses() { Set<Class<?>> resources =
-	 * new HashSet<>(); resources.add(ProcessoResources.class);
-	 * 
-	 * //classes do swagger... resources.add(ApiListingResource.class);
-	 * resources.add(SwaggerSerializers.class); return resources; }
-	 */
-	//
-	// public static class ValidationConfigurationContextResolver implements
-	// ContextResolver<ValidationConfig> {
-	//
-	// @Context
-	// private ResourceContext resourceContext;
-	//
+	
 
 	@Override
 	public Set<Class<?>> getClasses() {
@@ -96,40 +46,5 @@ public class MyApplication extends Application {
 		return resources;
 	}
 
-	// @Override
-	// public ValidationConfig getContext(final Class<?> type) {
-	// return new ValidationConfig()
-	// .constraintValidatorFactory(resourceContext.getResource(InjectingConstraintValidatorFactory.class))
-	// .parameterNameProvider(new CustomParameterNameProvider());
-	// }
-	//
-	// /**
-	// * See ContactCardTest#testAddInvalidContact.
-	// */
-	// private class CustomParameterNameProvider implements
-	// ParameterNameProvider {
-	//
-	// private final ParameterNameProvider nameProvider;
-	//
-	// public CustomParameterNameProvider() {
-	// nameProvider =
-	// Validation.byDefaultProvider().configure().getDefaultParameterNameProvider();
-	// }
-	//
-	// @Override
-	// public List<String> getParameterNames(final Constructor<?> constructor) {
-	// return nameProvider.getParameterNames(constructor);
-	// }
-	//
-	// @Override
-	// public List<String> getParameterNames(final Method method) {
-	//// // See ContactCardTest#testAddInvalidContact.
-	//// if ("addContact".equals(method.getName())) {
-	//// return Arrays.asList("contact");
-	//// }
-	// return nameProvider.getParameterNames(method);
-	// }
-	// }
-	// }
-
+	
 }
