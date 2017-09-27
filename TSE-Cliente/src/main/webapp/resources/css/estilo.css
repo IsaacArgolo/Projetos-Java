@@ -1,0 +1,45 @@
+h3 {
+	text-align: center;
+	padding-bottom: 10px;
+	top: auto;
+	bottom: auto;
+}
+
+.box {
+	width: 600px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ddd;
+	border: 1px solid;
+	border-radius: 2px;
+	border-style: solid;
+	border-color: grey transparent;
+	padding-bottom: 20px;
+	border-top-color: grey;
+	border-right-color: grey;
+	border-bottom-color: grey;
+	border-left-color: grey;
+	border-right-color: grey;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: grey;
+	border-right-color: grey;
+	border-bottom-color: grey;
+	border-left-color: grey;
+}
+
+.box1 {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+	background-color: #eee;
+}
+
+.tableP {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}

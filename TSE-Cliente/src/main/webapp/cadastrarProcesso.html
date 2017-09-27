@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="resources/css/bootstrap.css">
+<link rel="stylesheet" href="resources/css/estilo.css">
+<title>Principal</title>
+</head>
+<body>
+	<h3>Cadastrar Processo</h3>
+	<div class="container">
+		<div class="row box1 jumbotron">
+			<form action="">
+				<div class="form-group">
+					<label for="parte1">Parte 1:</label> <select class="form-control"
+						id="partes1">
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="parte1">Parte 2:</label> <select class="form-control"
+						id="partes2">
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="idClasses">Classe:</label> <select class="form-control"
+						id="idClasses">
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="idSituacao">Situação:</label> <select
+						class="form-control" id="idSituacao">
+						<option value="">Selecione..</option>
+						<option value="1">Andamento</option>
+					</select>
+				</div>
+
+				<div class="btn-group">
+
+					<button type="button" class="btn btn-primary" onclick="salvar();">Gerar
+						Processo</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="resources/js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+<script type="text/javascript" src="resources/js/config.js"></script>
+<script type="text/javascript" src="resources/js/processoController.js"></script>
+</html>
